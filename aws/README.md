@@ -24,6 +24,8 @@ To initialize your Terraform workspace, run the below command:
 
 ```shell
 $ terraform init
+```
+
 To check the changes that will be done by your configuration files, run the below command:
 
 ```shell
