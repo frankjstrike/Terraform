@@ -3,7 +3,7 @@ locals {
 }
 
 module "infra" {
-    source = "../../modules/infra"
-    environment = local.environment
+    source = "../infra"
+    environment_name = local.environment
     
 }

@@ -26,19 +26,6 @@ variable "default_tags"{
     }
 }
 
-variable "user_data" {
-    type = string
-    default = <<-EOF
-  #!/bin/bash
-  sudo apt update
-  sudo apt upgrade -y
-  sudo apt install apache2 -y
-  sudo systemctl start apache2
-  sudo systemctl enable apache2
-  sudo echo "Hello World from $(hostname -f)" > /var/www/html/index.html
-  EOF
-}
-
 variable "bucket_name" {
     type = string
     default = "my-terraform-bucket"
@@ -49,3 +36,7 @@ variable "key_name" {
     default = "my_key_name"
 }
 
+variable environment_name {
+    description = "value of environment"
+    type = string
+}

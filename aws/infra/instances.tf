@@ -8,7 +8,7 @@ resource "aws_instance" "instance" {
   user_data = templatefile("${path.module}/user_data.sh", {})
   tags = {
     Name = "Webserver ${count.index}"
-    Environment = var.environment
+    Environment = var.environment_name
     OS = var.os
   }
 }
