@@ -3,7 +3,7 @@ output "alb_security_group_id" {
 }
 
 output "instance_hostnames" {
-  value = [for i in aws_instance.instance : i.public_dns]
+  value       = [for i in aws_instance.instance : i.public_dns]
   description = "The public DNS of the instances"
 }
 
